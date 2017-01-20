@@ -76,17 +76,3 @@ def pprint(f):
             nexttext=" "*(4-log10)
             if ele==0:
                 print("    ",end="|")
-            else:
-                print(nexttext+str(ele),end="|")
-        
-    cmd=""
-    pprint(f)
-    while cmd not in["w","a","s","d"]:
-        cmd=raw_input(">")
-    f2=tilt_field(f,cmd)
-    if f2!=f:f=add_random(f2)
-    if max_tile(f)==2048:
-        print("you win")
-        sys.exit(1)
-pprint(f)
-print("you lose")
