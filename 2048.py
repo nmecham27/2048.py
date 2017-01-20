@@ -78,11 +78,7 @@ def pprint(f):
                 print("    ",end="|")
             else:
                 print(nexttext+str(ele),end="|")
-        print()
-
-f=add_random(add_random(get_new_field()))
-while not (f==tilt_field(f,"w")==tilt_field(f,"a")
-==tilt_field(f,"s")==tilt_field(f,"d")):
+        
     cmd=""
     pprint(f)
     while cmd not in["w","a","s","d"]:
